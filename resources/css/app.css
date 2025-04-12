@@ -9,3 +9,19 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+.task-card {
+    cursor: pointer;
+    margin: 10px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.task-card.completed {
+    border-color: green;
+}
+
+.task-card.not-completed {
+    border-color: red;
+}
+

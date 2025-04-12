@@ -27,10 +27,11 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
-            ->registration()
+            ->registration(\App\Filament\Pages\Auth\Register::class)
             ->passwordReset()
             ->emailVerification()
             ->profile()
+            ->authGuard('admin')
             ->resources([
                 \App\Filament\Resources\UserResource::class,
                 \App\Filament\Resources\TaskResource::class,
@@ -63,6 +64,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
+                \App\Http\Middleware\EnsureUserIsAdmin::class,
             ]);
     }
 }
