@@ -1,66 +1,61 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# task managmet System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Introduction
 
-## About Laravel
+This project is a full-stack task management application built with Laravel. It features separate interfaces for regular users and administrators, along with role-based permissions and a clean, responsive design.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Project Overview
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The application provides a comprehensive task management system with the following key features:
+- User Authentication: Secure registration and login system with role-based access control
+- Task Management: Create, edit, delete, and track tasks with completion status
+- Dual Interfaces: User interface built with Laravel Blade and Tailwind CSS and Admin dashboard powered by Filament Admin Panel
+- Data Protection: Form request validation for all inputs
+- Database Management: MySQL database with migrations and seeders
+- Soft Delete: Trash and restore functionality for tasks
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## Technology Used
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Backend: Laravel 12.x
+- Admin Panel: Filament Admin Panel
+- Frontend: Blade templates with Tailwind CSS
+- Authentication: Custom authentication with Sanctum token with custom middleware for role management
+- Database: MySQL with migrations and Eloquent ORM
+- Version Control: Git with feature-based commits
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Installation and Usage
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Getting Started
+Follow the setup instructions below to get the application running on your local environment.
 
-## Laravel Sponsors
+## Prerequisites
+- PHP 8.1+
+- Composer
+- MySQL
+- Node.js and NPM
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
+### Running the Project
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+1. Clone the repository to your local machine using `git clone https://github.com/dina1033/task-managment.git`.
+2. Enter to the folder `cd task-management`.
+3. install the required dependencies by running `composer install`.
+4. Install NPM packages `npm install`.
+5. Create a copy of the `.env.example` file and name it `.env` run`cp .env.example .env`.
+6. Generate Laravel application key run `php artisan key:generate`.
+7. Run the migrations and seed the database using `php artisan migrate:fresh --seed`.
+8. Create another database for unit testing environment and put the information in `phpunit.xml` file.
+9. Compile assets `npm run dev`.
+9. Start the server `php artisan serve`.
 
-## Contributing
+### Running the Test Cases
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. Run the test cases using `php artisan test`.
 
-## Code of Conduct
+### Access Information
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- User Interface: http://localhost:8000
+- Admin Panel: http://localhost:8000/admin
+- Default Admin Login: Email: admin@example.com , Password: password
+- Default User Login: Email: user@example.com , Password: password
