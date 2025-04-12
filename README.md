@@ -51,7 +51,7 @@ Follow the setup instructions below to get the application running on your local
 
 ### Running the Test Cases
 
-1. Run the test cases using `php artisan test`.
+- Run the test cases using `php artisan test`.
 
 ### Access Information
 
